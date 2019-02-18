@@ -8,13 +8,16 @@ var air_x = 2;
 // Check key pressed down
 var x_input = (keyboard_check(ord("D")) - keyboard_check(ord("A"))) * acceleration;
 
-if ( on_ground )
+
+
+if ( on_ground ) {
 	momentum[x_dir] = clamp(momentum[x_dir] + x_input, -term_velocity[x_dir], term_velocity[x_dir]);
-else
+} else
 	momentum[x_dir] = clamp(momentum[x_dir] + x_input, -term_velocity[air_x], term_velocity[air_x]);
 
+
 // Stop adding to momentum and go to idle animation, if not in air
-if ( !x_input && on_ground) {
+if ( (x_input == 0) && on_ground) {
 	// Set animation to idle
 	momentum[x_dir] = lerp(momentum[x_dir], 0, 0.3);
 }
@@ -43,3 +46,5 @@ if (on_ground) {
 		momentum[y_dir] = jump_speed /3;
 	}
 }
+
+// Abilities here
