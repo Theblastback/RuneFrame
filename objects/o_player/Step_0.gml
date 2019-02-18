@@ -48,3 +48,7 @@ if (on_ground) {
 }
 
 // Abilities here
+
+// Make blocks (INCOMPLETE)
+if (mouse_check_button_released(mb_left))
+	make_block();

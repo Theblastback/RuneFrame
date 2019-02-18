@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "1ed1894e-e132-415b-aea4-06dfdf94c3e9",
+            "Value": {
+                "id": "76b0de57-8574-47fe-9ff0-c79f3fbb1990",
+                "resourcePath": "tilesets\\t_make_blocks\\t_make_blocks.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "2aa144b4-1ad2-425b-9ce3-e90ddd0fef8c",
             "Value": {
                 "id": "e084d5b3-ff12-4118-a22d-108518641e08",
@@ -103,11 +111,27 @@
             }
         },
         {
+            "Key": "4ef793a5-927a-4868-9f5e-093cef1312c0",
+            "Value": {
+                "id": "fa655904-aaef-44fc-a868-966b57c87d72",
+                "resourcePath": "sprites\\s_make_block_tiles\\s_make_block_tiles.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6364dad1-259c-4158-9091-8ff1e8bc4c89",
             "Value": {
                 "id": "d06014e1-514a-46c0-8c2b-efa13715a06a",
                 "resourcePath": "scripts\\tile_collide_at_points\\tile_collide_at_points.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6d714ee1-8f8e-4625-9cdb-b24f3bf8002c",
+            "Value": {
+                "id": "bf00f599-4c0d-4353-9204-20b732ca06bd",
+                "resourcePath": "objects\\o_make_block\\o_make_block.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -231,6 +255,14 @@
             }
         },
         {
+            "Key": "cd5a84c5-d775-4f9f-b224-2861a3dd4982",
+            "Value": {
+                "id": "2eff53eb-2d4f-490e-be31-52e5c8dae5e4",
+                "resourcePath": "sprites\\s_make_block_object\\s_make_block_object.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e118b9f6-e078-4082-858b-47302c36a9e6",
             "Value": {
                 "id": "7aae8254-964a-45f1-86b5-ee8df614eb07",
@@ -263,6 +295,14 @@
             }
         },
         {
+            "Key": "f07e817a-2cf7-4c41-aa5b-e119303ce919",
+            "Value": {
+                "id": "5cb200fa-3728-46b0-9864-8edcdb5b93cf",
+                "resourcePath": "scripts\\make_block\\make_block.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "40770955-a691-48a8-a5ea-035d52886938",
@@ -281,7 +321,8 @@
     ],
     "script_order": [
         "6364dad1-259c-4158-9091-8ff1e8bc4c89",
-        "c482e936-6d0c-401f-b6c8-7369e852fce8"
+        "c482e936-6d0c-401f-b6c8-7369e852fce8",
+        "f07e817a-2cf7-4c41-aa5b-e119303ce919"
     ],
     "tutorial": ""
 }
