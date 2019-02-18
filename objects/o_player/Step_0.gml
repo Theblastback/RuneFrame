@@ -1,46 +1,45 @@
+var bbox_side;
+
+var x_dir = 0;
+var y_dir = 1;
+var air_x = 2;
 /// Walking code
 
 // Check key pressed down
-if (keyboard_check(ord("D")) ) {
-	// sprite_index = name of the sprite
-	// Cap moment at 15 pixels per tick
-	if (momentum_x <= 35) {
-		momentum_x += 1;
-	}
-	
-	x += momentum_x;
-}
+var x_input = (keyboard_check(ord("D")) - keyboard_check(ord("A"))) * acceleration;
 
-if (keyboard_check(ord("A")) ) {
-	// sprite_index = name of sprite
-	if (momentum_x >= -35) {
-		momentum_x -= 1;
-	}
-	
-	x += momentum_x;
-}
-
-if (keyboard_check(ord("W")) && !air_borne) {
-	// sprite_index = name of sprite
-	momentum_y = 50;
-	y += momentum_y;
-}
-
-if (keyboard_check(ord("S")) ) {
-	// Find block on and try to phase through it
-}
+if ( on_ground )
+	momentum[x_dir] = clamp(momentum[x_dir] + x_input, -term_velocity[x_dir], term_velocity[x_dir]);
+else
+	momentum[x_dir] = clamp(momentum[x_dir] + x_input, -term_velocity[air_x], term_velocity[air_x]);
 
 // Stop adding to momentum and go to idle animation, if not in air
-if ( (keyboard_check_released(ord("D"))) && (keyboard_check_released(ord("A"))) ) {
-	
-	if ( !air_borne ) {
-		// Set animation to idle
-		if (momentum_x < 0)
-			momentum_x += 1;
-		else if (momentum_x > 0)
-			momentum_x -= 1;
-	}
+if ( !x_input && on_ground) {
+	// Set animation to idle
+	momentum[x_dir] = lerp(momentum[x_dir], 0, 0.3);
 }
 
+// Gravity
+momentum[y_dir] = momentum[y_dir] + grav;
 
-// Collision checking here
+// Apply terminal velocity
+momentum[y_dir] = clamp(momentum[y_dir], -term_velocity[y_dir], term_velocity[y_dir]);
+
+// Movement & collision detection
+move_and_collide(c_tilemap, tile_size, momentum);
+
+// Air detection
+on_ground = tile_collide_at_points(c_tilemap, [bbox_left, bbox_bottom], [bbox_right -1, bbox_bottom]);
+
+if (on_ground) {
+	// Jumping
+	if (keyboard_check_pressed(ord("W")) ) {
+		// sprite_index = name of sprite
+		momentum[y_dir] = jump_speed;
+	}
+} else {
+	// Adjustable jump height
+	if (keyboard_check_released(ord("W")) && (momentum[y_dir] <= (jump_speed / 3)) ) {
+		momentum[y_dir] = jump_speed /3;
+	}
+}

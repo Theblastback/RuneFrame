@@ -1,6 +1,14 @@
 image_speed = 0.5;
-gravity = -10; // How fast one falls
-term_velocity = -50; // Maximum speed one can fall
-momentum_y = 0; // How fast one is going
-momentum_x = 0;
-air_borne = 0;
+gravity = 0; // How fast one falls
+term_velocity = [10, 31, 7]; // Maximum speed one can fall
+momentum = [0, 0];
+on_ground = 0;
+grav = 2; // I don't understand how the built in gravity propert works and interacts with the player object. I want full control
+
+var layer_id = layer_get_id("Collision");
+c_tilemap = layer_tilemap_get_id(layer_id);
+
+
+jump_speed = -32;
+acceleration = 4;
+tile_size = 32;
