@@ -1,4 +1,10 @@
 ///@description This strictly makes the block. Does not check to see if the player's collision box is in the way
+///@param Player X, Y array
+
+
+// Check to see if block can be made (within range)
+
+
 var layer_id = layer_get_id("Sprites");
 
 instance_create_layer(mouse_x, mouse_y, layer_id, o_make_block); // make_block records state of collision boxes

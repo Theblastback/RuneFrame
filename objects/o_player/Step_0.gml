@@ -51,4 +51,4 @@ if (on_ground) {
 
 // Make blocks (INCOMPLETE)
 if (mouse_check_button_released(mb_left))
-	make_block();
+	make_block([x, y]);
