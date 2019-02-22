@@ -17,7 +17,7 @@ if ( !can_make ) {
 	var layer_id = layer_get_id("Sprites");
 	c_make_break = layer_tilemap_get_id(layer_id);
 
-	instance_create_layer(mouse_x, mouse_y, layer_id, o_make_block); // make_block records state of collision boxes
+	var inst = instance_create_layer(mouse_x, mouse_y, layer_id, o_make_block); // make_block records state of collision boxes
 
 	// c_tilemap is the collision tilemap id
 	for (var x_dir = 0; x_dir < 3; x_dir++) {
