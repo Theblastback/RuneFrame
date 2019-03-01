@@ -11,6 +11,7 @@ grav = 2; // I don't understand how the built in gravity propert works and inter
 var layer_id = layer_get_id("Collision");
 c_tilemap = layer_tilemap_get_id(layer_id);
 
+charges = 5;
 
 jump_speed = -32;
 acceleration = 4;

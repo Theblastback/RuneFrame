@@ -54,9 +54,13 @@ if ( mouse_check_button_pressed(mb_left) && !placement_down ) { // Redundancy ch
 }
 
 if ( mouse_check_button_released(mb_left) && placement_down ) {
+	if ( (o_place_block.status == 0) && (charges > 0) ) {
+		make_block();
+		charges--;
+	}
+			
 	placement_down = 0;
 	instance_destroy(o_place_block);
-	make_block();
 }
 
 if ( mouse_check_button_released(mb_right) )
@@ -65,4 +69,5 @@ if ( mouse_check_button_released(mb_right) )
 		instance_destroy(o_place_block);
 	} else { // Break block
 		break_block();
+		charges++;
 	}
