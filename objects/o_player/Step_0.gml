@@ -43,3 +43,26 @@ move_and_collide(c_tilemap, tile_size, momentum);
 
 // Air detection
 on_ground = tile_collide_at_points(c_tilemap, [bbox_left, bbox_bottom], [bbox_right -1, bbox_bottom]);
+
+
+// Abilities here
+var layer_id = layer_get_id("Sprites");
+
+if ( mouse_check_button_pressed(mb_left) && !placement_down ) { // Redundancy check
+	instance_create_layer(mouse_x, mouse_y, layer_id, o_place_block);
+	placement_down = 1;
+}
+
+if ( mouse_check_button_released(mb_left) && placement_down ) {
+	placement_down = 0;
+	instance_destroy(o_place_block);
+	make_block();
+}
+
+if ( mouse_check_button_released(mb_right) )
+	if ( placement_down ) {
+		placement_down = 0;
+		instance_destroy(o_place_block);
+	} else { // Break block
+		break_block();
+	}
