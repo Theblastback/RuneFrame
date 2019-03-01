@@ -12,7 +12,7 @@ var vector2_y = 1;
 
 // Horizontal check
 x += velocity[vector2_x];
-// ADD MORE POINTS TO FIX COLLISION BUGS
+
 if ( velocity[vector2_x] > 0 ) {
 	var tile_right = tile_collide_at_points(tile_id, [bbox_right -1, bbox_top], [bbox_right -1, y -tile_size], [bbox_right -1, y], [bbox_right -1, y +tile_size], [bbox_right - 1, bbox_bottom -1]);
 	if ( tile_right ) {
