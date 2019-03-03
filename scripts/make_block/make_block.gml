@@ -25,7 +25,7 @@ if ( !can_make ) {
 	var inst = instance_position(mouse_x, mouse_y, o_make_block);
 	with (inst) {
 		// Check to see if newly made block is overlapping player
-		if ( !block_collides_with_others(inst, o_player) && !block_collides_with_others(inst, o_left_right_bot)/*Add other AI checks here*/ ) {
+		if ( !block_collides_with_others(inst, o_player) && !collide_with_ai(inst)) {
 			// c_tilemap is the collision tilemap id
 			for (var x_dir = 0; x_dir < 3; x_dir++) {
 				for (var y_dir = 0; y_dir < 3; y_dir++) {

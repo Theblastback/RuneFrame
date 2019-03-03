@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "401e77d7-3e49-4b09-a325-d77d0b4d6d3d",
+            "Value": {
+                "id": "af08880f-6682-40d0-bcdb-fd0cfd661917",
+                "resourcePath": "scripts\\collide_with_ai\\collide_with_ai.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4ef793a5-927a-4868-9f5e-093cef1312c0",
             "Value": {
                 "id": "fa655904-aaef-44fc-a868-966b57c87d72",
@@ -372,7 +380,8 @@
         "c482e936-6d0c-401f-b6c8-7369e852fce8",
         "f07e817a-2cf7-4c41-aa5b-e119303ce919",
         "ab5a00d2-0847-490b-baa8-a65212355cad",
-        "a353cfc1-f66a-485b-b1b1-dbee58fddbb3"
+        "a353cfc1-f66a-485b-b1b1-dbee58fddbb3",
+        "401e77d7-3e49-4b09-a325-d77d0b4d6d3d"
     ],
     "tutorial": ""
 }

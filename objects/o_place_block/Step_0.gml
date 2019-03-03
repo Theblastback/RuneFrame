@@ -23,10 +23,14 @@ if ( c > (range * range) )
 	
 // Check to see if block is inside player (Only ever will be one of each block)
 var z = o_place_block;
-if ( block_collides_with_others(o_place_block, o_player) ||
-tile_collide_at_points(c_tilemap, [z.bbox_left, z.bbox_top], [z.bbox_left, z.y], [z.bbox_left, z.bbox_bottom],
-[z.bbox_right, z.bbox_top], [z.bbox_right, z.y], [z.bbox_right, z.bbox_bottom],
-[z.x, z.bbox_top], [z.x,z.y], [z.x, z.bbox_bottom]) || /*AI checks here*/block_collides_with_others(o_place_block, o_left_right_bot))
+if ( block_collides_with_others(o_place_block, o_player) || collide_with_ai(z) ||
+	/*Collision box check*/tile_collide_at_points(c_tilemap, [z.bbox_left, z.bbox_top],
+	[z.bbox_left, z.y], [z.bbox_left, z.bbox_bottom], [z.bbox_right, z.bbox_top],
+	[z.bbox_right, z.y], [z.bbox_right, z.bbox_bottom], [z.x, z.bbox_top], [z.x,z.y],
+	[z.x, z.bbox_bottom]) ) {
+
 	status = types.colliding;
-	
+}
+
+
 image_index = status;
