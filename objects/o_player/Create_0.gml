@@ -13,7 +13,10 @@ c_tilemap = layer_tilemap_get_id(layer_id);
 
 charges = 5;
 
+// -1 = left, 1 = right
+facing = 1;
 jump_speed = -32;
 acceleration = 4;
 tile_size = 32;
 placement_down = 0;
+stun_start = 0;
