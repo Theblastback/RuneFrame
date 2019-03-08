@@ -10,10 +10,14 @@ var yy = mouse_y - tile_size;
 var layer_id = layer_get_id("Collision");
 var c_tilemap = layer_tilemap_get_id(layer_id);
 
+layer_id = layer_get_id("Anti_block_zone");
+var anti_tilemap = layer_tilemap_get_id(layer_id);
+
 for (var x_dir = 0; x_dir < 3; x_dir++)
 	for (var y_dir = 0; y_dir < 3; y_dir++) {
 		// Check if collision boxes would overlap with others
-		can_make = can_make || tile_collide_at_points(c_tilemap, [xx + (tile_size * x_dir), yy + (tile_size * y_dir)]);
+		can_make = can_make | tile_collide_at_points(c_tilemap, [xx + (tile_size * x_dir), yy + (tile_size * y_dir)]);
+		can_make = can_make | tile_collide_at_points(anti_tilemap, [xx + (tile_size * x_dir), yy + (tile_size * y_dir)]);
 	}
 
 if ( !can_make ) {

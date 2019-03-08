@@ -6,7 +6,7 @@ var air_x = 2;
  x_input = (keyboard_check(ord("D")) - keyboard_check(ord("A"))) * acceleration;
 
 if ( stun_start )
-	if ( (current_time - stun_start) < 1000 ) // Stun for a second
+	if ( (current_time - stun_start) < 500 ) // Stun for a half second
 		x_input = 0;
 	else
 		stun_start = 0;
