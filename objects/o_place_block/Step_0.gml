@@ -27,6 +27,10 @@ if ( block_collides_with_others(o_place_block, o_player) || collide_with_ai(z) |
 	/*Collision box check*/tile_collide_at_points(c_tilemap, [z.bbox_left, z.bbox_top],
 	[z.bbox_left, z.y], [z.bbox_left, z.bbox_bottom], [z.bbox_right, z.bbox_top],
 	[z.bbox_right, z.y], [z.bbox_right, z.bbox_bottom], [z.x, z.bbox_top], [z.x,z.y],
+	[z.x, z.bbox_bottom])  ||
+	/*anti spawn zone*/tile_collide_at_points(anti_tilemap, [z.bbox_left, z.bbox_top],
+	[z.bbox_left, z.y], [z.bbox_left, z.bbox_bottom], [z.bbox_right, z.bbox_top],
+	[z.bbox_right, z.y], [z.bbox_right, z.bbox_bottom], [z.x, z.bbox_top], [z.x,z.y],
 	[z.x, z.bbox_bottom]) ) {
 
 	status = types.colliding;

@@ -20,3 +20,9 @@ acceleration = 4;
 tile_size = 32;
 placement_down = 0;
 stun_start = 0;
+
+
+
+// Ability modifiers
+stun_dur = 2000; // 2 seconds
+air_break = false;

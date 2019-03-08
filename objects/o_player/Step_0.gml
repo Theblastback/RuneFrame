@@ -71,10 +71,11 @@ if ( mouse_check_button_released(mb_left) && placement_down ) {
 }
 
 if ( mouse_check_button_released(mb_right) )
-	if ( placement_down ) {
-		placement_down = 0;
-		instance_destroy(o_place_block);
-	} else { // Break block
-		break_block();
-		charges++;
-	}
+	if ( on_ground || air_break )
+		if ( placement_down ) {
+			placement_down = 0;
+			instance_destroy(o_place_block);
+		} else { // Break block
+			if ( break_block() )
+				charges++;
+		}

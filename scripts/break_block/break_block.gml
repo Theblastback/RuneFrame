@@ -18,5 +18,7 @@ if (position_meeting(mouse_x, mouse_y, o_make_block)) {
 		}
 		instance_destroy();
 	}
+	return true;
 }
 
+return false;
