@@ -37,7 +37,6 @@ if (velocity[vector2_y] > 0) {
 	if (tile_bottom) {
 		y = bbox_bottom & ~(tile_size -1);
 		y -= bbox_bottom - y;
-		y -=1;
 		velocity[@ vector2_y] = 0;
 	}
 } else {

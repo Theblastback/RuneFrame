@@ -49,7 +49,7 @@ momentum[dir.y_dir] = clamp(momentum[dir.y_dir], -term_velocity[dir.y_dir], term
 move_and_collide(c_tilemap, tile_size, momentum);
 
 // Air detection
-on_ground = tile_collide_at_points(c_tilemap, [bbox_left, bbox_bottom], [bbox_right -1, bbox_bottom +1]);
+on_ground = tile_collide_at_points(c_tilemap, [bbox_left, bbox_bottom], [bbox_right -1, bbox_bottom]);
 
 
 // Abilities here
