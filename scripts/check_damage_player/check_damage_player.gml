@@ -11,3 +11,15 @@ if ( block_collides_with_others(argument[0], o_player) && !o_player.stun_start) 
 if (o_player.on_ground)
 		o_player.momentum[1] = -15;
 }
+
+if ( o_player.charges < 0 ) { // Back to checkpoint
+	// Death animation here
+	o_player.x = o_player.last_checkpoint.x;
+	o_player.y = o_player.last_checkpoint.y;
+
+	o_player.momentum[0] = 0;
+	o_player.momentum[1] = 0;
+
+	break_all();
+	o_player.charges = 5;
+}

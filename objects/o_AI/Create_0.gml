@@ -1,3 +1,5 @@
+/// @description Basis for all other AI
+
 // -1 = left/down, 1 = right/up
 facing = -1;
 stunned = false;

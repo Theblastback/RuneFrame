@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "06e16bdc-b7d9-4ccb-a4be-cbee376f0368",
+            "Value": {
+                "id": "0e522d93-7f91-457d-a017-19bf827d222c",
+                "resourcePath": "objects\\o_AI\\o_AI.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0be05763-c145-440f-8d10-9b260eac8e04",
             "Value": {
                 "id": "b2210269-2f15-429b-90dc-bba56121c3f9",
@@ -116,6 +124,14 @@
                 "id": "7c41d8c8-d0b0-4783-87bd-7f527efd147f",
                 "resourcePath": "sprites\\s_goal\\s_goal.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3a906758-efe3-41f9-811c-5bd5a6f408a5",
+            "Value": {
+                "id": "887a2b6f-054f-4a82-82e6-4ee529c68017",
+                "resourcePath": "scripts\\stun_enemy\\stun_enemy.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -223,14 +239,6 @@
             }
         },
         {
-            "Key": "9beb1179-00e5-4099-be49-5eb5fa58ebdf",
-            "Value": {
-                "id": "662e8c04-15dd-48fc-b9d6-1f3c22f9612a",
-                "resourcePath": "scripts\\stun\\stun.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "9cd911e2-81ad-4129-8fd9-1eedd041257d",
             "Value": {
                 "id": "8148e5a5-69d9-4f2d-9943-5e1da47e0153",
@@ -260,6 +268,14 @@
                 "id": "bf2c92f7-0aa2-4db5-9152-a82a1e752c4f",
                 "resourcePath": "scripts\\block_collides_with_others\\block_collides_with_others.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a724ec72-33e0-487d-8f59-e2bb82f9ba16",
+            "Value": {
+                "id": "28a2cd39-8ce3-4f9c-b20b-6c6eb3cfbe2a",
+                "resourcePath": "sprites\\s_checkpoint_idle\\s_checkpoint_idle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -343,6 +359,14 @@
             }
         },
         {
+            "Key": "cf598186-35ec-4085-bcb3-f42ef11d39e5",
+            "Value": {
+                "id": "8c53d64c-4782-4847-9dc4-217fc5f18623",
+                "resourcePath": "objects\\o_checkpoint\\o_checkpoint.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e118b9f6-e078-4082-858b-47302c36a9e6",
             "Value": {
                 "id": "7aae8254-964a-45f1-86b5-ee8df614eb07",
@@ -356,6 +380,14 @@
                 "id": "ad5dc157-2b3f-41f8-8b7a-351804268aea",
                 "resourcePath": "views\\e1d2e537-80bf-4481-ba45-8d86a0388795.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "eb6dc314-2b85-4cc4-9ac6-6d882fd45dcd",
+            "Value": {
+                "id": "104036cf-925f-4693-a09d-d2217478bcdc",
+                "resourcePath": "sprites\\s_checkpoint_active\\s_checkpoint_active.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -407,8 +439,8 @@
         "a353cfc1-f66a-485b-b1b1-dbee58fddbb3",
         "401e77d7-3e49-4b09-a325-d77d0b4d6d3d",
         "50c3150f-f329-4a3e-ae44-eb74dd459420",
-        "9beb1179-00e5-4099-be49-5eb5fa58ebdf",
-        "3e38992b-59e0-4c45-be3e-6d0ebccf00d7"
+        "3e38992b-59e0-4c45-be3e-6d0ebccf00d7",
+        "3a906758-efe3-41f9-811c-5bd5a6f408a5"
     ],
     "tutorial": ""
 }

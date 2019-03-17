@@ -31,13 +31,13 @@ momentum[dir.y_dir] = momentum[dir.y_dir] + grav;
 
 if (on_ground && !stun_start) {
 	// Jumping
-	if (keyboard_check_pressed(ord("W")) ) {
+	if (keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_space) ) {
 		// sprite_index = name of sprite
 		momentum[dir.y_dir] = jump_speed;
 	}
 } else {
 	// Adjustable jump height
-	if (keyboard_check_released(ord("W")) && (momentum[dir.y_dir] <= (jump_speed / 3)) ) {
+	if ( (keyboard_check_released(ord("W")) || keyboard_check_released(vk_space)) && (momentum[dir.y_dir] <= (jump_speed / 3)) ) {
 		momentum[dir.y_dir] = jump_speed /3;
 	}
 }
@@ -51,6 +51,15 @@ move_and_collide(c_tilemap, tile_size, momentum);
 // Air detection
 on_ground = tile_collide_at_points(c_tilemap, [bbox_left, bbox_bottom], [bbox_right -1, bbox_bottom]);
 
+on_block = 0;
+if ( on_ground ) {
+	for (var i = 0; i < instance_number(o_make_block); i++) {
+		var inst = instance_find(o_make_block, i);
+		on_block = on_block | block_collides_with_others(id, inst);
+	}
+}
+
+point_of_aim = point_direction(x, y, mouse_x, mouse_y);
 
 // Abilities here
 var layer_id = layer_get_id("Sprites");
