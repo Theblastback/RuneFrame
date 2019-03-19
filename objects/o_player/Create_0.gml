@@ -29,8 +29,9 @@ stun_dur = 2000; // 2 seconds
 stun_delay = 7000; // 7 second delay
 air_break = false;
 
-stun_charge = 0; // Add stun delay to it
 stun_target = noone;
+stuns_used = 0; // Keep track of charges
+stun_cooldown = 0;
 
 point_of_aim = 0; // Degrees
 

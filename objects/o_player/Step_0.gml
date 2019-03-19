@@ -88,3 +88,11 @@ if ( mouse_check_button_released(mb_right) )
 			if ( break_block() )
 				charges++;
 		}
+		
+// Stun cooldown
+if ( stuns_used > 0 )
+	if (stun_cooldown + stun_delay < current_time) {
+		stun_cooldown = current_time;
+		stuns_used--;
+		charges++;
+	}
