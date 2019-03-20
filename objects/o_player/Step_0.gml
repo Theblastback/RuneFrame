@@ -46,10 +46,10 @@ if (on_ground && !stun_start) {
 momentum[dir.y_dir] = clamp(momentum[dir.y_dir], -term_velocity[dir.y_dir], term_velocity[dir.y_dir]);
 
 // Movement & collision detection
-move_and_collide(c_tilemap, tile_size, momentum);
+move_and_collide(global.c_tilemap, tile_size, momentum);
 
 // Air detection
-on_ground = tile_collide_at_points(c_tilemap, [bbox_left, bbox_bottom], [bbox_right -1, bbox_bottom]);
+on_ground = tile_collide_at_points(global.c_tilemap, [bbox_left, bbox_bottom], [bbox_right -1, bbox_bottom]);
 
 on_block = 0;
 if ( on_ground ) {

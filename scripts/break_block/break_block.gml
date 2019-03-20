@@ -1,6 +1,3 @@
-var layer_id = layer_get_id("Collision");
-var c_collide = layer_tilemap_get_id(layer_id);
-
 if (position_meeting(mouse_x, mouse_y, o_make_block)) {
 	var inst = instance_position(mouse_x, mouse_y, o_make_block);
 	with (inst) {
@@ -11,9 +8,9 @@ if (position_meeting(mouse_x, mouse_y, o_make_block)) {
 				var cell_x = (xx + (x_dir * tile_size)) / tile_size;
 				var cell_y = (yy + (y_dir * tile_size)) / tile_size;
 				
-				var data = tilemap_get(c_collide, cell_x, cell_y);
+				var data = tilemap_get(global.c_tilemap, cell_x, cell_y);
 				data = tile_set_empty(data);
-				tilemap_set(c_collide, data, cell_x, cell_y);
+				tilemap_set(global.c_tilemap, data, cell_x, cell_y);
 			}
 		}
 		instance_destroy();

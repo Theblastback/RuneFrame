@@ -11,7 +11,13 @@ on_block = 0;
 grav = 2; // I don't understand how the built in gravity propert works and interacts with the player object. I want full control
 
 var layer_id = layer_get_id("Collision");
-c_tilemap = layer_tilemap_get_id(layer_id);
+global.c_tilemap = layer_tilemap_get_id(layer_id);
+
+layer_id = layer_get_id("Anti_block_zone");
+global.anti_tilemap = layer_tilemap_get_id(layer_id);
+
+layer_id = layer_get_id("Sprites");
+global.sprite_layer = layer_id;
 
 charges = 5;
 
@@ -23,6 +29,9 @@ tile_size = 32;
 placement_down = 0;
 stun_start = 0;
 last_checkpoint = noone; // Stores the id of the last checkpoint
+start_x = x;
+start_y = y;
+
 
 // Ability modifiers
 stun_dur = 2000; // 2 seconds

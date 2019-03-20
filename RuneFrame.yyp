@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "834f04bc-8994-4a3f-bd99-7370a4d80449",
+            "Value": {
+                "id": "f750ac91-7c34-42df-a759-f96376208294",
+                "resourcePath": "scripts\\destroy_lazer\\destroy_lazer.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8449b14d-4bcc-40a8-a306-c4586bae6c3e",
             "Value": {
                 "id": "d3cd2231-2c7b-43b6-8e6f-1ed5e2ea3900",
@@ -260,6 +268,14 @@
                 "id": "915b8e2a-846c-4f3c-836f-488d7803158c",
                 "resourcePath": "objects\\o_place_block\\o_place_block.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9f3103ac-c6a6-4bfa-adc2-100ac4bced4a",
+            "Value": {
+                "id": "8fda5deb-c22c-4871-9fd9-c47935fd6316",
+                "resourcePath": "sprites\\s_laser_hit\\s_laser_hit.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -323,6 +339,14 @@
             "Value": {
                 "id": "56cd9b0d-aa47-4084-919d-32d67c0bba00",
                 "resourcePath": "objects\\o_left_right_bot\\o_left_right_bot.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ba24b59b-b197-4e6c-a143-3e22dd176570",
+            "Value": {
+                "id": "61924915-c803-40c5-a646-be929fc820f8",
+                "resourcePath": "objects\\o_lazer_left\\o_lazer_left.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -440,7 +464,8 @@
         "401e77d7-3e49-4b09-a325-d77d0b4d6d3d",
         "50c3150f-f329-4a3e-ae44-eb74dd459420",
         "3e38992b-59e0-4c45-be3e-6d0ebccf00d7",
-        "3a906758-efe3-41f9-811c-5bd5a6f408a5"
+        "3a906758-efe3-41f9-811c-5bd5a6f408a5",
+        "834f04bc-8994-4a3f-bd99-7370a4d80449"
     ],
     "tutorial": ""
 }

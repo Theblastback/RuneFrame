@@ -19,7 +19,7 @@ if (o_player.charges > 0) {
 		var collision = false;
 
 		for (var i = 1; i < x_dist; i++) {
-			collision = tile_collide_at_points(o_player.c_tilemap, [o_player.x + i, o_player.y + (i *slope)]);
+			collision = tile_collide_at_points(global.c_tilemap, [o_player.x + i, o_player.y + (i *slope)]);
 			if (collision)
 				break;
 		}
