@@ -1,18 +1,18 @@
 {
-    "id": "ba24b59b-b197-4e6c-a143-3e22dd176570",
+    "id": "8345ded7-4a48-48b0-abd3-f9121c307e79",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_lazer_left",
+    "name": "o_lazer_down",
     "eventList": [
         {
-            "id": "4b468a80-7752-4d29-9806-151e2de66aec",
+            "id": "7959a9e5-6d02-4104-b60b-3ec2902fcbb6",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "ba24b59b-b197-4e6c-a143-3e22dd176570"
+            "m_owner": "8345ded7-4a48-48b0-abd3-f9121c307e79"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -33,6 +33,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "82e50bb2-b4e1-4e38-a915-e988fc422626",
+    "spriteId": "6f9e2c61-ebf2-445f-bf26-a32f60e68176",
     "visible": true
 }
