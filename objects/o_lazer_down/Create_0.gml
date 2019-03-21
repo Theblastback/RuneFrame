@@ -9,8 +9,8 @@ var tile_size = 32;
 var cur_id = id;
 // Spawn lazer segments 
 
-if (!tile_collide_at_points(o_player.c_tilemap, [x, y + tile_size]) ) {
-	id.next = instance_create_layer(x, y + tile_size, global.sprite_layer, o_lazer_left);
+if (!tile_collide_at_points(global.c_tilemap, [x, y + tile_size]) ) {
+	id.next = instance_create_layer(x, y + tile_size, global.sprite_layer, o_lazer_down);
 	if (id.next.hit == true)
 		id.next.sprite_index = s_laser_down_hit; //Laser hit
 	else

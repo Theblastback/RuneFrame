@@ -14,12 +14,12 @@ if (o_player.on_ground)
 
 if ( o_player.charges < 0 ) { // Back to checkpoint
 	// Death animation here
-	if (last_checkpoint != noone) {
+	if (o_player.last_checkpoint != noone) {
 		o_player.x = o_player.last_checkpoint.x;
 		o_player.y = o_player.last_checkpoint.y;
 	} else {
-		o_player.x = start_x;
-		o_player.y = start_y;
+		o_player.x = o_player.start_x;
+		o_player.y = o_player.start_y;
 	}
 	
 	o_player.momentum[0] = 0;
