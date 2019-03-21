@@ -43,5 +43,6 @@ stuns_used = 0; // Keep track of charges
 stun_cooldown = 0;
 
 point_of_aim = 0; // Degrees
+laser_spawn = false; // Allowed to spawn on lasers
 
 depth = -1000;

@@ -239,6 +239,14 @@
             }
         },
         {
+            "Key": "80c9fddf-5059-4332-9eec-a6aabb277287",
+            "Value": {
+                "id": "e1373a09-eb34-4699-811d-07d4a1995586",
+                "resourcePath": "objects\\o_lazers\\o_lazers.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "81ff5156-a309-4686-8036-9d6605617866",
             "Value": {
                 "id": "4e36103b-95ae-4ab4-a0a2-c3997674f8f9",
@@ -332,6 +340,14 @@
                 "id": "915b8e2a-846c-4f3c-836f-488d7803158c",
                 "resourcePath": "objects\\o_place_block\\o_place_block.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9fd1a426-bd11-4d4e-a77c-4e18c5e00024",
+            "Value": {
+                "id": "16568398-3418-4c82-b7c8-ff13d96ac395",
+                "resourcePath": "scripts\\collide_with_lasers\\collide_with_lasers.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -479,6 +495,14 @@
             }
         },
         {
+            "Key": "e36c67fc-929d-4eaf-aeea-de300b384237",
+            "Value": {
+                "id": "dae1756d-022b-4888-95b2-168ea0c4c2fe",
+                "resourcePath": "scripts\\adjust_lasers\\adjust_lasers.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e9e707af-4616-45eb-8ccd-7980c78d26ca",
             "Value": {
                 "id": "ee6f2134-b215-4e18-bd9e-b34de65f6ce0",
@@ -553,7 +577,9 @@
         "50c3150f-f329-4a3e-ae44-eb74dd459420",
         "3e38992b-59e0-4c45-be3e-6d0ebccf00d7",
         "3a906758-efe3-41f9-811c-5bd5a6f408a5",
-        "834f04bc-8994-4a3f-bd99-7370a4d80449"
+        "834f04bc-8994-4a3f-bd99-7370a4d80449",
+        "9fd1a426-bd11-4d4e-a77c-4e18c5e00024",
+        "e36c67fc-929d-4eaf-aeea-de300b384237"
     ],
     "tutorial": ""
 }

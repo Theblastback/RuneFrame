@@ -24,14 +24,15 @@ if ( c > (range * range) )
 // Check to see if block is inside player (Only ever will be one of each block)
 var z = o_place_block;
 if ( block_collides_with_others(o_place_block, o_player) || collide_with_ai(z) ||
-	/*Collision box check*/tile_collide_at_points(global.c_tilemap, [z.bbox_left, z.bbox_top],
+/*Collision box check*/tile_collide_at_points(global.c_tilemap, [z.bbox_left, z.bbox_top],
 	[z.bbox_left, z.y], [z.bbox_left, z.bbox_bottom], [z.bbox_right, z.bbox_top],
 	[z.bbox_right, z.y], [z.bbox_right, z.bbox_bottom], [z.x, z.bbox_top], [z.x,z.y],
 	[z.x, z.bbox_bottom])  ||
-	/*anti spawn zone*/tile_collide_at_points(global.anti_tilemap, [z.bbox_left, z.bbox_top],
+/*anti spawn zone*/tile_collide_at_points(global.anti_tilemap, [z.bbox_left, z.bbox_top],
 	[z.bbox_left, z.y], [z.bbox_left, z.bbox_bottom], [z.bbox_right, z.bbox_top],
 	[z.bbox_right, z.y], [z.bbox_right, z.bbox_bottom], [z.x, z.bbox_top], [z.x,z.y],
-	[z.x, z.bbox_bottom]) ) {
+	[z.x, z.bbox_bottom]) ||
+/*laser check*/ collide_with_lasers() ) {
 
 	status = types.colliding;
 }
