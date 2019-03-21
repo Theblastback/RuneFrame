@@ -498,7 +498,7 @@
             "Key": "e36c67fc-929d-4eaf-aeea-de300b384237",
             "Value": {
                 "id": "dae1756d-022b-4888-95b2-168ea0c4c2fe",
-                "resourcePath": "scripts\\adjust_lasers\\adjust_lasers.yy",
+                "resourcePath": "scripts\\adjust_lasers_make\\adjust_lasers_make.yy",
                 "resourceType": "GMScript"
             }
         },

@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "o_lazers",
     "eventList": [
-        
+        {
+            "id": "58f8a634-b62d-4fee-8015-f418db8e52be",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "80c9fddf-5059-4332-9eec-a6aabb277287"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

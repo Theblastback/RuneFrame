@@ -33,6 +33,7 @@ if ( !can_make ) {
 					tilemap_set_at_pixel(global.c_tilemap, 1, xx + (tile_size * x_dir), yy + (tile_size * y_dir));
 				}
 			}
+			adjust_lasers_make(inst);
 		} else { // Invalid placement. Destroy placement
 			instance_destroy();
 		}
