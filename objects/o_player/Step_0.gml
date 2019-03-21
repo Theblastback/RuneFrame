@@ -96,3 +96,35 @@ if ( stuns_used > 0 )
 		stuns_used--;
 		charges++;
 	}
+	
+// Laser check
+if ( (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, o_lazers, false, true) != noone) && !stun_start ) {
+	stun_start = current_time;
+	charges--;
+
+	momentum[0] = 7 * facing * -1;
+
+		
+	if (on_ground)
+			momentum[1] = -15;
+
+
+	if ( charges < 0 ) { // Back to checkpoint
+		// Death animation here
+		if (last_checkpoint != noone) {
+			x = last_checkpoint.x;
+			y = last_checkpoint.y;
+		} else {
+			x = start_x;
+			y = start_y;
+		}
+	
+		momentum[0] = 0;
+		momentum[1] = 0;
+
+		break_all();
+		charges = 5;
+	}
+	
+}
+	

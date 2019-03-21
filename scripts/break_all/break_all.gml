@@ -22,5 +22,6 @@ for (var index = 0; index < total; index++) {
 			}
 		}
 		instance_destroy();
+		adjust_lasers_break([xx+tile_size, yy+tile_size]);
 	}
 }

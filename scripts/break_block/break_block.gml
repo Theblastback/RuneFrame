@@ -13,6 +13,7 @@ if (position_meeting(mouse_x, mouse_y, o_make_block)) {
 				tilemap_set(global.c_tilemap, data, cell_x, cell_y);
 			}
 		}
+		adjust_lasers_break([xx+32,yy+32]);
 		instance_destroy();
 	}
 	return true;
